@@ -1,0 +1,159 @@
+.home {
+    padding: 2rem 1rem;
+    width: calc(100% - 230px);
+    box-sizing: border-box;
+    margin-left: 230px; 
+    margin-top: 40px;
+  }
+  
+  .home-container {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .content {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .movies-section,
+  .anime-section {
+    margin-bottom: 2rem;
+  }
+  
+  .movies-section h3,
+  .anime-section h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    width: 100%; 
+    box-sizing: border-box;
+  }
+  
+  .view-more {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem; 
+  background-color: #00c853;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem; 
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .view-more:hover {
+    background-color: #00c853;
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  
+  .loading::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 5px solid #00c853;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  .not-found {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #999;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+    .home {
+        margin-top: 100px; 
+        margin-left: 0;
+        width: 100%; 
+        padding: 1rem;
+      }
+
+      .movies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        gap: 0.75rem;
+        padding: 0.5rem;
+      }
+    
+      .view-more {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
+      .movies-section h3,
+     .anime-section h3 {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  .not-found {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #999;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  }
+
+  @media (max-width: 480px) {
+    .home {
+      margin-top: 80px;
+      padding: 0.5rem;
+    }
+  
+    .movies-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 0.5rem;
+      padding: 0.25rem;
+    }
+  
+    .view-more {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+    }
+    .movies-section h3,
+   .anime-section h3 {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+   }
+
+   .not-found {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  }
