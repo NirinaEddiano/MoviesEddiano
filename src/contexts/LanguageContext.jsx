@@ -40,6 +40,7 @@ export const LanguageProvider = ({ children }) => {
       playVideo: "Lancer la vidéo",
       errorCard: "Erreur lors du chargement de la carte du film",
       notFound: "Aucun résultat trouvé",
+      noVideo:"Aucune vidéo disponible en raison de manque de droits d'auteur",
     },
     en: {
       home: "Home",
@@ -72,6 +73,7 @@ export const LanguageProvider = ({ children }) => {
       playVideo: "Play video",
       errorCard: "Error loading movie card",
       notFound: "No results found",
+      noVideo:"No video available due to copyright restrictions",
     },
   };
 
